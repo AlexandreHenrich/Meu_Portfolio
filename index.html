@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio | Desenvolvedor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Variáveis de Cores (Paleta Moderna) */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+        }
+
+        /* Reset Básico */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Layout Principal */
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+        section { margin-bottom: 4rem; }
+        h1, h2, h3 { color: var(--text-main); margin-bottom: 1rem; }
+        h2 { font-size: 2rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 0.5rem; }
+
+        /* Sobre Mim (Hero Section) */
+        .hero { display: flex; align-items: center; gap: 2rem; margin-top: 2rem; }
+        .hero img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary); }
+        .hero-text p { color: var(--text-muted); font-size: 1.1rem; }
+
+        /* Cards de Projetos */
+        .grid-projetos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 12px; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card p { color: var(--text-muted); margin-bottom: 1rem; }
+        .btn-github { background: var(--text-main); color: var(--bg-color); padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; display: inline-block; }
+
+        /* Skills e Formação */
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tag { background: rgba(59, 130, 246, 0.2); color: var(--primary); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
+        
+        /* Contato */
+        .contato-links { display: flex; gap: 1.5rem; align-items: center; margin-top: 2rem; }
+        .contato-links i { font-size: 2rem; transition: color 0.3s; }
+        .contato-links i:hover { color: var(--primary); }
+        .btn-contato { background-color: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
+        .btn-contato:hover { background-color: var(--primary-hover); }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .contato-links { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="hero" id="sobre">
+        <img src="imagem.png" alt="Minha Foto / Avatar">
+        <div class="hero-text">
+            <h1>Olá, eu sou Alexandre Henrich Rodrigues Soares 👋</h1>
+            <h3>Desenvolvedor em Formação</h3>
+            <p id="texto-sobre">
+                Prazer, sou o Alexandre! 🚀 Sou estudante de Desenvolvimento de Sistemas e apaixonado por transformar desafios em soluções inteligentes. Meu foco é resolver problemas de maneira estratégica, garantindo que o código se adapte à necessidade real do projeto. Penso sempre um passo à frente: adoro criar estruturas e lógicas escaláveis que possam crescer e se integrar a novos cenários no futuro. Para mim, programar é construir peças hoje que vão montar os grandes projetos de amanhã.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="grid-projetos">
+            <div class="card">
+                <h3>World Guessing Game (Ranking Edition)</h3>
+                <p><strong>O Jogo:</strong> Um jogo interativo de conhecimentos gerais onde o jogador precisa adivinhar o país com base na sua capital e continente.</p>
+                <p><strong>Destaques:</strong> A pontuação é calculada de forma dinâmica pelo tempo de resposta e dificuldade (baseada na população do país). Conta com um Top 5 Ranking persistente.</p>
+                <p><strong>Tecnologias:</strong> Python, Tkinter (Interface Gráfica), SQLite (Banco de Dados) e consumo de API REST (Requests).</p>
+                <br>
+                <a href="https://github.com/AlexandreHenrich/World-Guessing-Game" target="_blank" class="btn-github"><i class="fab fa-github"></i> Ver no GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <br>
+        <h3>Hard Skills</h3>
+        <div class="tags" style="margin-bottom: 1rem;">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Java</span>
+        </div>
+        <h3>Soft Skills</h3>
+        <div class="tags">
+            <span class="tag">Trabalho em Equipe</span>
+            <span class="tag">Resolução de Problemas</span>
+            <span class="tag">Proatividade</span>
+        </div>
+    </section>
+
+    <section id="formacao">
+        <h2>Formação & Ferramentas</h2>
+        <br>
+        <p><strong>Formação:</strong> Curso Técnico em Desenvolvimento de Sistemas - SENAI (Cursando).</p>
+        <p><strong>Ferramentas:</strong> VS Code, MySQL Workbench, Git.</p>
+    </section>
+
+    <section id="contato">
+        <h2>Vamos conversar?</h2>
+        <p>Estou em busca de novas oportunidades e pronto para colaborar em projetos incríveis.</p>
+        <div class="contato-links">
+            <a href="mailto:alexandrehenrich010@gmail.com?subject=Oportunidade&body=Olá! Vi seu portfólio e..." class="btn-contato">
+                Contate-me agora
+            </a>
+            <a href="https://github.com/AlexandreHenrich" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alexandre-h-185b023b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
